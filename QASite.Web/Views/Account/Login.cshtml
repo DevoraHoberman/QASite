@@ -1,0 +1,22 @@
+﻿<div class="container">
+    <main role="main" class="pb-3" style="margin-top: 80px;">
+        <div class="row">
+            
+            <div class="col-md-6 offset-md-3 card card-body bg-light">
+                <form method="post" action="/account/login">
+                    <h3>Login to your account</h3>
+                    @if (ViewBag.Message != null)
+                    {
+                        <span class="text-danger">@ViewBag.Message</span>
+                    }
+                    <input type="text" name="email" placeholder="Email" class="form-control" />
+                    <br />
+                    <input type="text" name="password" placeholder="Password" class="form-control" />
+                    <br />
+                    <button class="btn btn-primary">Login</button>
+                </form>
+                <a href="/account/signup">Sign up for a new account!</a>
+            </div>
+        </div>
+    </main>
+</div>
